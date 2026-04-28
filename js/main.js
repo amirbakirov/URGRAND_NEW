@@ -96,6 +96,13 @@ document.addEventListener('DOMContentLoaded', function () {
   function updateServicesTitle() {
     if (!servicesTitle || svcScrollYTrigger === null) return;
 
+    // No animation on mobile / small screens
+    if (window.innerWidth <= 960) {
+      servicesTitle.style.transform = '';
+      servicesTitle.style.opacity   = '';
+      return;
+    }
+
     var scrollY = window.pageYOffset;
 
     if (scrollY <= svcScrollYTrigger) {

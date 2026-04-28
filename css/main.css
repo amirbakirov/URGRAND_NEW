@@ -323,6 +323,36 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: #fff;
   background: rgba(255, 255, 255, 0.10);
 }
+.mobile-menu__footer {
+  position: absolute;
+  bottom: 36px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 24px;
+}
+.mobile-menu__max {
+  display: flex;
+  align-items: center;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+.mobile-menu__max:hover { opacity: 1; }
+.mobile-menu__phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.mobile-menu__phone:hover { color: #fff; }
 
 /* ============================================================
    HERO — rounded block (like strategy)
@@ -1126,8 +1156,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .hero__content { padding-top: 320px; }
   .header { top: 12px; width: calc(100% - 24px); }
   .header__nav { display: none; } /* mobile-menu handles the overlay */
+  .header__right { display: none; }
   .burger { display: flex; }
-  .header__right { gap: 8px; }
   .hero__stat { min-width: 130px; }
   .practices__grid { grid-template-columns: repeat(2, 1fr); }
   .practices__watermark { display: none; }
