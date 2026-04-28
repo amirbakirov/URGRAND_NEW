@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Салим сайт </title>
+  <meta name="description" content="Лендинг ">
+  <link rel="canonical" href="http://grandvozvrat-avto.ru">
+  <meta property="og:url" content="http://grandvozvrat-avto.ru">
+  <meta property="og:image" content="https://static.tildacdn.com/tild6461-3861-4130-b031-346430663337/icons8--50.png">
+  <link rel="icon" href="https://static.tildacdn.com/tild6531-6362-4032-b937-366265613663/703b2679-f6cc-4044-a.png">
+  <link rel="stylesheet" href="https://static.tildacdn.com/css/fonts-tildasans.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <script>
+    (function(){
+      if(window.innerWidth >= 980){
+        if(!sessionStorage.getItem('visited')){
+          document.documentElement.style.opacity = '0';
+          document.addEventListener('DOMContentLoaded', function(){
+            setTimeout(function(){
+              document.documentElement.style.transition = 'opacity ease-in-out 0.2s';
+              document.documentElement.style.opacity = '1';
+              sessionStorage.setItem('visited','1');
+            }, 400);
+          });
+        }
+      }
+    })();
+  </script>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header id="header" class="header">
+  <div class="header__inner">
+    <a href="#" class="header__logo">
+      <img class="header__logo-icon" src="Images/logo.webp" alt="ГРАНД">
+      <span class="header__logo-text">ГРАНД</span>
+    </a>
+    <nav class="header__nav" id="main-nav">
+      <a href="#" class="header__nav-link">Главная</a>
+      <a href="#industries" class="header__nav-link">Отрасли</a>
+      <a href="#practices" class="header__nav-link">Практики</a>
+      <a href="#service" class="header__nav-link">Услуги</a>
+      <a href="#team" class="header__nav-link">Команда</a>
+      <a href="#blog" class="header__nav-link">Блог</a>
+    </nav>
+    <div class="header__right">
+      <a href="" target="_blank" rel="noopener" class="header__max" aria-label="Перейти в Max">
+        <!-- <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="14" fill="#FC3F1D"/><text x="14" y="19" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff" font-family="Arial">Я</text></svg> -->
+        <img src="Images/max.webp" alt="Max" width="92" height="92">
+      </a>
+      <a href="tel:+79063211157" class="header__phone">
+        <svg class="header__phone-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14.5 11.5c0 .3-.1.6-.2.9-.1.3-.3.6-.5.8-.4.4-.8.6-1.3.7-.5.1-1 .1-1.5-.1-.9-.3-1.8-.8-2.6-1.4C7.5 11.5 6.5 10.4 5.6 9.2c-.6-.8-1.1-1.7-1.4-2.6-.2-.5-.2-1-.1-1.5.1-.5.3-.9.7-1.3.3-.3.7-.5 1.1-.5.2 0 .4 0 .5.1.2.1.4.2.5.4l1.7 2.4c.2.2.3.4.3.6 0 .2-.1.4-.2.6L8 8.1c0 .1-.1.2-.1.2 0 .1 0 .2.1.2.2.3.4.6.7.9.3.3.6.6.9.8.1.1.2.1.3.1.1 0 .2-.1.2-.1l.6-.7c.2-.2.3-.3.6-.3.2 0 .4.1.6.2l2.4 1.7c.2.1.4.3.4.5 0 .1.1.2.1.4z" fill="currentColor"/></svg>
+        +7 (906) 321-11-57
+      </a>
+    </div>
+    <button class="burger" id="burger" aria-label="Меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===================== MOBILE MENU ===================== -->
+<!-- Lives OUTSIDE <header> — no parent stacking-context, so position:fixed
+     covers the full viewport correctly on every browser incl. iOS Safari  -->
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <button class="mobile-menu__close" id="mobile-menu-close" aria-label="Закрыть меню">
+    <span></span><span></span>
+  </button>
+  <nav class="mobile-menu__nav">
+    <a href="#" class="mobile-menu__link">Главная</a>
+    <a href="#industries" class="mobile-menu__link">Отрасли</a>
+    <a href="#practices" class="mobile-menu__link">Практики</a>
+    <a href="#service" class="mobile-menu__link">Услуги</a>
+    <a href="#team" class="mobile-menu__link">Команда</a>
+    <a href="#blog" class="mobile-menu__link">Блог</a>
+  </nav>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<div class="hero-wrap">
+<section id="hero" class="hero">
+  <div class="hero__bg">
+    <img src="Images/bg.png" alt="" fetchpriority="high">
+  </div>
+  <div class="hero__overlay"></div>
+  <div class="hero__content container">
+    <h1 class="hero__title t-animate" data-animate-style="fadeindown" data-animate-duration="2" data-animate-distance="10">
+      Современные юридические<br>инструменты для вашего успеха
+    </h1>
+    <div class="hero__stats">
+      <div class="hero__stats-row">
+        <div class="hero__stat t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10">
+          <span class="hero__stat-num">10 лет</span>
+          <span class="hero__stat-label">на рынке юридических услуг</span>
+        </div>
+        <div class="hero__stat t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10" data-animate-delay="0.1">
+          <span class="hero__stat-num">500+</span>
+          <span class="hero__stat-label">успешно завершенных дел</span>
+        </div>
+        <div class="hero__stat t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10" data-animate-delay="0.2">
+          <span class="hero__stat-num">90%</span>
+          <span class="hero__stat-label">выигранных судебных споров</span>
+        </div>
+        <div class="hero__stat t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10" data-animate-delay="0.3">
+          <span class="hero__stat-num">150</span>
+          <span class="hero__stat-label">постоянных клиентов</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ===================== PRACTICES ===================== -->
+<section id="practices" class="practices">
+  <div class="container">
+    <div class="practices__head">
+      <div class="section-label t-animate" data-animate-style="fadeindown" data-animate-duration="2" data-animate-distance="10">практики</div>
+      <h2 class="section-title t-animate" data-animate-style="fadeindown" data-animate-duration="2" data-animate-distance="10" data-animate-delay="0.2">
+        Практики, которые<br>защищают ваш бизнес
+      </h2>
+    </div>
+  </div>
+  <div class="practices__wrap">
+    <div class="practices__watermark">НАШИ ПРАКТИКИ</div>
+    <div class="container">
+      <div class="practices__brand-tag">ГРАНД</div>
+      <div class="practices__grid">
+        <!-- Row 1 -->
+        <div class="pcard pcard--dark t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10">
+          <h3 class="pcard__title">Интеллектуальная собственность</h3>
+          <p class="pcard__text">С развитием научно-технического прогресса наиболее ценным ресурсом является интеллектуальные возможности</p>
+          <button class="pcard__btn" data-popup="usligi" aria-label="Подробнее">↗</button>
+        </div>
+        <div class="pcard t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10" data-animate-delay="0.1">
+          <h3 class="pcard__title">Судебно-арбитражная практика</h3>
+          <p class="pcard__text">Ключевой задачей бизнеса и частных лиц является сохранение имеющихся активов. Именно для этого участники гражданского оборота прибегают к судебной защите.</p>
+          <button class="pcard__btn" data-popup="usligi" aria-label="Подробнее">↗</button>
+        </div>
+        <div class="pcard t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10" data-animate-delay="0.2">
+          <h3 class="pcard__title">Недвижимость и строительство</h3>
+          <p class="pcard__text">Проекты в сфере эксплуатации недвижимости и строительства реализуются как самостоятельно участниками рынка, так и с привлечением инвесторов.</p>
+          <button class="pcard__btn" data-popup="usligi" aria-label="Подробнее">↗</button>
+        </div>
+        <div class="pcard t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10" data-animate-delay="0.3">
+          <h3 class="pcard__title">Корпоративное сопровождение</h3>
+          <p class="pcard__text">Участие в коммерческой деятельности, как правило, сопровождается привлечением капитала и созданием корпоративных структур.</p>
+          <button class="pcard__btn" data-popup="usligi" aria-label="Подробнее">↗</button>
+        </div>
+        <!-- Row 2 -->
+        <div class="pcard t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10">
+          <h3 class="pcard__title">Защита деловой репутации</h3>
+          <p class="pcard__text">Деловая репутация — это нематериальное благо, оценка результатов работы граждан и организаций в сфере их бизнеса.</p>
+          <button class="pcard__btn" data-popup="usligi" aria-label="Подробнее">↗</button>
+        </div>
+        <div class="pcard t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10" data-animate-delay="0.1">
+          <h3 class="pcard__title">Процедура банкротства</h3>
+          <p class="pcard__text">Причинами неплатежеспособности лица могут быть непрофессиональное управление, обман контрагентов и многие другие обстоятельства.</p>
+          <button class="pcard__btn" data-popup="usligi" aria-label="Подробнее">↗</button>
+        </div>
+        <div class="pcard t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10" data-animate-delay="0.2">
+          <h3 class="pcard__title">Сопровождение сделок слияния и поглощения</h3>
+          <p class="pcard__text">Мы работаем как с классическими сделками купли-продажи долей и акций, так и со сложными структурами приобретения бизнеса.</p>
+          <button class="pcard__btn" data-popup="usligi" aria-label="Подробнее">↗</button>
+        </div>
+        <div class="pcard pcard--accent t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10" data-animate-delay="0.3">
+          <h3 class="pcard__title">Корпоративное сопровождение</h3>
+          <p class="pcard__text">Участие в коммерческой деятельности, как правило, сопровождается привлечением капитала и созданием корпоративных структур.</p>
+          <button class="pcard__btn" data-popup="usligi" aria-label="Подробнее">↗</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-section__inner">
+      <h2 class="cta-section__title t-animate" data-animate-style="fadeindown" data-animate-duration="2" data-animate-distance="10">
+        Необходима<br>консультация?
+      </h2>
+      <div class="cta-section__right t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10" data-animate-delay="0.2">
+        <p class="cta-section__text">Не знаете, как защитить свои права? Сомневаетесь в правильности действий? Оставьте заявку, и наши юристы оперативно свяжутся с вами для первичной консультации.</p>
+        <button class="btn btn--dark" data-popup="form">Получить консультацию</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STRATEGY ===================== -->
+<section id="strategy" class="strategy">
+  <div class="container">
+    <div class="strategy__head">
+      <div class="section-label section-label--light t-animate" data-animate-style="fadeindown" data-animate-duration="2" data-animate-distance="10">принципы</div>
+      <div class="strategy__head-row">
+        <h2 class="section-title section-title--light t-animate" data-animate-style="fadeindown" data-animate-duration="2" data-animate-distance="10" data-animate-delay="0.2">Стратегия защиты</h2>
+        <p class="strategy__subtitle t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10" data-animate-delay="0.2">Работаем не по шаблону, а под вашу ситуацию — с расчётом финансового результата и рисков.</p>
+      </div>
+    </div>
+    <div class="strategy__grid">
+      <div class="strategy-card t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10">
+        <span class="strategy-card__num">01</span>
+        <h3 class="strategy-card__title">Наука</h3>
+        <p class="strategy-card__text">Мы противники мнения о том, что теория далека от практики. Судебная практика не подойдет под каждый уникальный случай. Основа юридического знания – в понимании и толковании права на основании доктрины.</p>
+      </div>
+      <div class="strategy-card t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10" data-animate-delay="0.2">
+        <span class="strategy-card__num">02</span>
+        <h3 class="strategy-card__title">Практика</h3>
+        <p class="strategy-card__text">Анализ актуальных позиций судебной практики высших и региональных инстанций. Изучение российского и зарубежного законодательства.</p>
+      </div>
+      <div class="strategy-card t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10" data-animate-delay="0.4">
+        <span class="strategy-card__num">03</span>
+        <h3 class="strategy-card__title">Исследование</h3>
+        <p class="strategy-card__text">Мы внимательно изучаем фактические обстоятельства дела и предложим два и более варианта, наиболее приемлемых для Вас.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INDUSTRIES ===================== -->
+<section id="industries" class="industries">
+  <div class="industries__inner">
+    <div class="industries__bg">
+      <img src="Images/industries.png" alt="" loading="lazy">
+    </div>
+    <div class="industries__overlay"></div>
+    <div class="container industries__content">
+      <div class="industries__head">
+        <div>
+          <div class="section-label section-label--light t-animate" data-animate-style="fadeindown" data-animate-duration="2" data-animate-distance="10">Отрасли нашей юридической практики</div>
+          <h2 class="section-title section-title--light t-animate" data-animate-style="fadeindown" data-animate-duration="2" data-animate-distance="10" data-animate-delay="0.2">Сопровождение бизнеса</h2>
+        </div>
+        <p class="industries__intro t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10" data-animate-delay="0.2">Глубокая экспертиза, понимание отраслевой специфики и защита интересов клиента на каждом этапе проекта.</p>
+      </div>
+      <div class="industries__list">
+        <div class="industry-row t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10">
+          <h3 class="industry-row__name">Девелопмент</h3>
+          <p class="industry-row__text">Юридическое сопровождение проектов строительства и реконструкции, от оформления земельных участков до ввода объекта в эксплуатацию. Снижаем риски, защищаем инвестиции и предотвращаем споры до их возникновения.</p>
+          <span class="industry-checkmark" aria-hidden="true">✓</span>
+        </div>
+        <div class="industry-row t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10" data-animate-delay="0.1">
+          <h3 class="industry-row__name">Инвестиции</h3>
+          <p class="industry-row__text">Юристы юридической фирмы «Гранд» за последние годы участвовали в различных проектах по созданию компаний с инвестициями не только в российскую экономику, но и в экономику иных государств.</p>
+          <span class="industry-checkmark" aria-hidden="true">✓</span>
+        </div>
+        <div class="industry-row t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10" data-animate-delay="0.2">
+          <h3 class="industry-row__name">Информационные технологии</h3>
+          <p class="industry-row__text">Правовая защита IT-бизнеса: договоры, интеллектуальная собственность, персональные данные, цифровые продукты. Создаём правовой фундамент для масштабирования.</p>
+          <span class="industry-checkmark" aria-hidden="true">✓</span>
+        </div>
+        <div class="industry-row t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10" data-animate-delay="0.3">
+          <h3 class="industry-row__name">Агропромышленный комплекс</h3>
+          <p class="industry-row__text">Комплексное сопровождение сельхозпроектов: земельные вопросы, субсидии, корпоративные структуры, споры. Помогаем агробизнесу работать стабильно и защищённо.</p>
+          <span class="industry-checkmark" aria-hidden="true">✓</span>
+        </div>
+        <div class="industry-row t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10" data-animate-delay="0.4">
+          <h3 class="industry-row__name">Электронная коммерция</h3>
+          <p class="industry-row__text">Правовое сопровождение онлайн-бизнеса: оферты, защита потребителей, маркетплейсы, трансграничные продажи. Минимизируем регуляторные и судебные риски.</p>
+          <span class="industry-checkmark" aria-hidden="true">✓</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section id="service" class="services">
+  <div class="container">
+    <!-- Row 1: tag (full width) -->
+    <div class="services__tag-row">
+      <div class="services__tag">Юридическая фирма</div>
+    </div>
+    <!-- Row 2: h2 (left, JS-animated) + description (right, normal) -->
+    <div class="services__head">
+      <h2 class="services__sticky-title section-title">Наши<br/>услуги</h2>
+      <p class="services__desc t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10" data-animate-delay="0.2">Приоритетом нашей деятельности является профессиональная и максимально быстрая защита интересов наших клиентов.</p>
+    </div>
+    <!-- Rows 3-4: full-width bento -->
+    <div class="services__bento">
+      <div class="scard scard--photo t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10">
+        <div class="scard__bg">
+          <img src="Images/zachita.png" alt="" loading="lazy">
+        </div>
+        <div class="scard__body">
+          <h3 class="scard__title">Защита от субсидиарной ответственности</h3>
+          <p class="scard__text">С появившейся судебной практикой свидетельствует о расширительном подходе к определению круга контролирующих лиц, что существенно повышает риски привлечения к ответственности.</p>
+          <button class="scard__btn" data-popup="usligi" aria-label="Полировка кузова">↗</button>
+        </div>
+      </div>
+      <div class="scard scard--dark t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10" data-animate-delay="0.2">
+        <div class="scard__body">
+          <h3 class="scard__title">Взыскание дебиторской задолженности</h3>
+          <p class="scard__text">Проблема в том, что рост дебиторской задолженности почти всегда сигнализирует о риске: клиенты платят с задержкой, а компания фактически кредитует их за свой счет.</p>
+          <button class="scard__btn" data-popup="usligi" aria-label="Полировка кузова">↗</button>
+        </div>
+      </div>
+      <div class="scard scard--photo t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10" data-animate-delay="0.2">
+        <div class="scard__bg">
+          <img src="Images/nalog_spori.png" alt="" loading="lazy">
+        </div>
+        <div class="scard__body">
+          <h3 class="scard__title">Налоговые споры и проверки</h3>
+          <p class="scard__text">Даже при добросовестной деятельности компании сталкиваются с задержками, блокировками счетов и претензиями со стороны налоговых органов.</p>
+          <button class="scard__btn" data-popup="usligi" aria-label="Полировка кузова">↗</button>
+        </div>
+      </div>
+      <div class="scard scard--dark t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10" data-animate-delay="0.4">
+        <div class="scard__body">
+          <h3 class="scard__title">Лизинговые споры и сальдо</h3>
+          <p class="scard__text">Ключевой риск для бизнеса — это так называемое «сальдо» итоговой расчет, в рамках которого лизинговая компания предъявляет требование о доплате, зачастую в значительном размере.</p>
+          <button class="scard__btn" data-popup="usligi" aria-label="Полировка кузова">↗</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REVIEWS ===================== -->
+<section id="reviews" class="reviews">
+  <div class="container">
+    <div class="reviews__head">
+      <div class="reviews__head-left">
+        <div class="section-label t-animate" data-animate-style="fadeindown" data-animate-duration="2" data-animate-distance="10">отзывы</div>
+        <div class="reviews__rating t-animate" data-animate-style="fadeindown" data-animate-duration="2" data-animate-distance="10">4.9</div>
+        <h2 class="section-title t-animate" data-animate-style="fadeindown" data-animate-duration="2" data-animate-distance="10" data-animate-delay="0.2">
+          Наши клиенты<br>говорят про нас
+        </h2>
+      </div>
+      <a href="https://yandex.ru/maps/org/ddd/121143298602/reviews/?ll=38.944528%2C45.038318&z=16" target="_blank" rel="noopener" class="reviews__all-link t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10" data-animate-delay="0.2">
+        Смотреть все отзывы на Яндексе
+        <span class="reviews__all-btn">↗</span>
+      </a>
+    </div>
+    <div class="reviews__slider">
+      <div class="reviews__track" id="reviews-track">
+        <div class="review-card">
+          <div class="review-card__header">
+            <img src="https://static.tildacdn.com/tild3639-3631-4831-a233-343836363135/a0e35529-4b17-4a78-a.png" alt="Салим Гулмуродов" class="review-card__avatar" loading="lazy">
+            <span class="review-card__name">Салим Гулмуродов</span>
+          </div>
+          <p class="review-card__text">Обратился из-за спора с лизинговой — после расторжения насчитали завышенное сальдо и требовали доплату. Юристы разобрали договор, пересчитали всё и показали ошибки со стороны лизингодателя. Сразу объяснили, какие есть варианты и на что можно рассчитывать. В итоге требования удалось существенно снизить, часть начислений убрали. Работают чётко: на связи, объясняют понятно</p>
+        </div>
+        <div class="review-card">
+          <div class="review-card__header">
+            <img src="https://static.tildacdn.com/tild3639-3631-4831-a233-343836363135/a0e35529-4b17-4a78-a.png" alt="Александр Петров" class="review-card__avatar" loading="lazy">
+            <span class="review-card__name">Александр Петров</span>
+          </div>
+          <p class="review-card__text">Обратились с налоговым спором — инспекция доначислила НДС. Юристы грамотно выстроили позицию, собрали доказательную базу и оспорили решение в арбитражном суде. Результатом очень довольны. Рекомендую всем, кто столкнулся с налоговыми претензиями.</p>
+        </div>
+        <div class="review-card">
+          <div class="review-card__header">
+            <img src="https://static.tildacdn.com/tild3639-3631-4831-a233-343836363135/a0e35529-4b17-4a78-a.png" alt="Ирина Смирнова" class="review-card__avatar" loading="lazy">
+            <span class="review-card__name">Ирина Смирнова</span>
+          </div>
+          <p class="review-card__text">Команда ГРАНД помогла защитить деловую репутацию компании. Профессиональный подход, чёткая стратегия и уверенная позиция в суде. Добились опровержения порочащих сведений. Работают на результат, всегда на связи.</p>
+        </div>
+      </div>
+      <div class="reviews__controls">
+        <button class="reviews__arrow" id="rev-prev" aria-label="Предыдущий">←</button>
+        <div class="reviews__dots" id="rev-dots">
+          <button class="reviews__dot active" data-idx="0"></button>
+          <button class="reviews__dot" data-idx="1"></button>
+          <button class="reviews__dot" data-idx="2"></button>
+        </div>
+        <button class="reviews__arrow" id="rev-next" aria-label="Следующий">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACTS ===================== -->
+<section id="contacts" class="contacts">
+  <div class="contacts__map">
+    <iframe
+      src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Accb2ab63947c649cff72681128f8caf396c011227be7d6b254c16c76da365dfd&width=100%25&height=100%&lang=ru_RU&scroll=true"
+      width="100%" height="480" frameborder="0" allowfullscreen loading="lazy"
+      title="Карта офиса ГРАНД"></iframe>
+  </div>
+  <div class="contacts__info container">
+    <div class="contacts__info-inner">
+      <div class="contacts__left t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10">
+        <div class="section-label">контакты</div>
+        <a href="tel:+79063211157" class="contacts__phone">+ 7(906) 321 11-57</a>
+        <a href="mailto:info@urgrand.ru" class="contacts__email">info@urgrand.ru</a>
+      </div>
+      <div class="contacts__right t-animate" data-animate-style="fadeinup" data-animate-duration="2" data-animate-distance="10" data-animate-delay="0.2">
+        <div class="contacts__address">Казань, ул. Юлиуса Фучика, 90А</div>
+        <button class="btn btn--dark" data-popup="form">Получить консультацию</button>
+      </div>
+    </div>
+    <a href="#privacy" class="contacts__privacy">Политика конфиденциальности</a>
+  </div>
+</section>
+
+<!-- ===================== FLOATING BUTTON ===================== -->
+<a href="#form" class="floating-btn" id="floating-btn" data-popup="form">Записаться</a>
+
+<!-- ===================== POPUP FORM ===================== -->
+<div class="popup-overlay" id="popup-form" role="dialog" aria-modal="true" aria-label="Форма обратной связи">
+  <div class="popup-form">
+    <button class="popup-close" id="close-form" aria-label="Закрыть">✕</button>
+    <h2 class="popup-form__title">Получить консультацию</h2>
+    <p class="popup-form__sub">Оставьте заявку — свяжемся в течение 15 минут</p>
+    <form class="form" id="consultation-form" novalidate>
+      <input type="text" name="name" class="form__input" placeholder="Имя" required autocomplete="name">
+      <input type="tel" name="phone" class="form__input" placeholder="+1(000)000-0000" required autocomplete="tel">
+      <button type="submit" class="btn btn--dark form__submit">Отправить заявку</button>
+    </form>
+    <p class="form__consent">Нажимая кнопку, вы даёте согласие на обработку персональных данных</p>
+    <div class="form__success" id="form-success" hidden>Заявка отправлена! Мы свяжемся с вами в ближайшее время.</div>
+  </div>
+</div>
+
+<!-- ===================== POPUP SERVICES ===================== -->
+<div class="popup-overlay" id="popup-usligi" role="dialog" aria-modal="true" aria-label="Полировка кузова">
+  <div class="popup-usligi">
+    <button class="popup-close popup-close--purple" id="close-usligi" aria-label="Закрыть">✕</button>
+    <div class="t-slds">
+      <div class="t-slds__track" id="usligi-track">
+        <div class="t-slds__slide">
+          <img src="https://static.tildacdn.com/tild3538-6165-4634-b762-336264646339/564561-1.png" alt="" loading="lazy">
+          <div class="t-slds__content">
+            <h3>Защита от субсидиарной ответственности</h3>
+            <p>Защищаем руководителей и участников компаний от субсидиарной ответственности. Оцениваем риски, разрабатываем стратегию защиты и представляем интересы в суде.</p>
+            <button class="btn btn--purple" data-popup="form">Записаться</button>
+          </div>
+        </div>
+        <div class="t-slds__slide">
+          <img src="https://static.tildacdn.com/tild6130-3062-4563-b161-393662663436/564561-1.png" alt="" loading="lazy">
+          <div class="t-slds__content">
+            <h3>Взыскание дебиторской задолженности</h3>
+            <p>Комплексная работа по взысканию задолженности: досудебное урегулирование, подача иска, сопровождение исполнительного производства.</p>
+            <button class="btn btn--purple" data-popup="form">Записаться</button>
+          </div>
+        </div>
+        <div class="t-slds__slide">
+          <img src="https://static.tildacdn.com/tild3739-6539-4631-a436-323163633338/noroot.png" alt="" loading="lazy">
+          <div class="t-slds__content">
+            <h3>Налоговые споры и проверки</h3>
+            <p>Сопровождение налоговых проверок, оспаривание решений о доначислении, представительство в арбитражных судах по налоговым делам.</p>
+            <button class="btn btn--purple" data-popup="form">Записаться</button>
+          </div>
+        </div>
+      </div>
+      <button class="t-slds__arrow t-slds__arrow--prev" id="usligi-prev" aria-label="Назад">←</button>
+      <button class="t-slds__arrow t-slds__arrow--next" id="usligi-next" aria-label="Вперёд">→</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha512-rBKOkdxEYT7qXQ+EJnxsAVAGOE55BQFgaYPgN2VQpJBEjCwCVFRoNfCwpANKmMpyMY7GVh4ANVltnF9kKNzw==" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
