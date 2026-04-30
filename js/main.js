@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Fade: starts at 30 % of travel, fully gone at 100 %
     var opacity = Math.max(0, 1 - Math.max(0, (progress - 0.3) / 0.7));
 
-    servicesTitle.style.transform = 'translateY(' + shift + 'px)';
+    servicesTitle.style.transform = 'translateY(' + (5 + shift) + 'px)';
     servicesTitle.style.opacity   = String(opacity);
   }
 
