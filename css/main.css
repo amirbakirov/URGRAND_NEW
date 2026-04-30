@@ -449,8 +449,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .practices__wrap { position: relative; }
 .practices__watermark {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  /* top: 50%; */
+  left: 55%;
   transform: translate(-50%, -46%);
   font-size: clamp(60px, 9vw, 130px);
   font-weight: 900;
