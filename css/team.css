@@ -1,0 +1,324 @@
+/* ============================================================
+   TEAM PAGE — extends main.css
+============================================================ */
+
+.header .header__inner {
+  height: 56px;
+  background: #081352bd;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 50px;
+  padding: 0 24px 0 20px;
+}
+
+.header .header__logo-icon { width: 64px; height: 64px; top: 0; }
+
+.header .header__logo-text {
+  display: block;
+  color: #d5d5d5;
+}
+
+.header .header__nav-link { color: #d5d5d5; }
+.header .header__nav-link:hover { background: rgba(0,0,0,0.08); }
+
+.header .header__phone { color: #d5d5d5; }
+.header .header__phone:hover { color: #ffffff; }
+
+/* Active nav link */
+.header__nav-link--active {
+  color: #fff !important;
+  position: relative;
+}
+.header__nav-link--active::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 12px;
+  right: 12px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+  opacity: 0.7;
+}
+/* .header.scrolled .header__nav-link--active { color: #1f1f1f !important; } */
+
+.mobile-menu__link--active {
+  color: #a771fe !important;
+}
+
+/* ============================================================
+   TEAM HERO — dark stats bar (no bg image)
+============================================================ */
+.team-hero-wrap {
+  background: #0d1f33;
+  padding-top: 124px; /* clear fixed header */
+}
+.team-hero {
+  background: transparent;
+}
+.team-hero__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+/* Reuse .hero__stat from main.css — only override bg */
+.team-hero .hero__stat {
+  background: rgba(20, 40, 80, 0.70);
+}
+
+/* ============================================================
+   TEAM INTRO
+============================================================ */
+.team-intro {
+  background: #f3f3f3;
+  padding: 80px 0 0;
+}
+.team-intro__head {
+  margin-bottom: 56px;
+}
+
+/* ============================================================
+   FEATURED ATTORNEY
+============================================================ */
+.team-featured {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.team-featured__watermark {
+  position: absolute;
+  top: -50px;
+  left: 95%;
+  transform: translateX(-100%);
+  /* font-size: clamp(108px, 7vw, 108px); */
+  font-size: 108px;
+  font-weight: 900;
+  color: rgba(0,0,0,0.04);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+.team-featured__card {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 60px;
+  background: #fff;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+}
+.team-featured__photo {
+  background: #1c3850;
+  min-height: 520px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.team-featured__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  filter: grayscale(15%);
+  transition: transform 0.6s ease;
+}
+.team-featured__card:hover .team-featured__photo img {
+  transform: scale(1.03);
+}
+.team-featured__info {
+  padding: 48px 48px 48px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.team-featured__name {
+  font-size: clamp(24px, 2.5vw, 34px);
+  font-weight: 800;
+  color: #1f1f1f;
+  line-height: 1.15;
+}
+.team-featured__role {
+  font-size: 15px;
+  font-weight: 600;
+  color: #a771fe;
+  /* color: #381eff; */
+  letter-spacing: 0.02em;
+}
+.team-featured__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 4px 0;
+}
+.team-featured__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}
+.team-featured__check {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: #1c3850;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+.team-featured__btn {
+  align-self: flex-start;
+  gap: 10px;
+}
+
+/* ============================================================
+   LAWYERS GRID
+============================================================ */
+.team-lawyers {
+  background: #f3f3f3;
+  padding: 0 0 100px;
+}
+.team-lawyers__title {
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 700;
+  color: #1f1f1f;
+  margin-bottom: 32px;
+}
+.team-lawyers__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.lawyer-card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: #1c3850;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.lawyer-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(28,56,80,0.25);
+}
+.lawyer-card__photo {
+  height: 280px;
+  overflow: hidden;
+  background: #162d45;
+}
+.lawyer-card__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  filter: grayscale(20%) brightness(0.85);
+  transition: transform 0.5s ease, filter 0.3s;
+}
+.lawyer-card:hover .lawyer-card__photo img {
+  transform: scale(1.05);
+  filter: grayscale(0%) brightness(0.95);
+}
+.lawyer-card__info {
+  padding: 20px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.lawyer-card__name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+.lawyer-card__role {
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+}
+
+/* ============================================================
+   VALUES
+============================================================ */
+.team-values {
+  background: #fff;
+  padding: 80px 0 100px;
+}
+.team-values__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+.value-item {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.value-item__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #1c3850;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.value-item__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1f1f1f;
+}
+.value-item__text {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.65;
+}
+
+/* ============================================================
+   RESPONSIVE — 960px
+============================================================ */
+@media (max-width: 960px) {
+  .team-hero__stats { grid-template-columns: repeat(2, 1fr); }
+  .team-featured__watermark { display: none; }
+  .team-featured__card {
+    grid-template-columns: 1fr;
+  }
+  .team-featured__photo { min-height: 380px; }
+  .team-featured__info { padding: 36px; }
+  .team-lawyers__grid { grid-template-columns: repeat(2, 1fr); }
+  .team-values__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ============================================================
+   RESPONSIVE — 640px
+============================================================ */
+@media (max-width: 640px) {
+  .team-hero__stats { grid-template-columns: repeat(2, 1fr); }
+  .team-featured__card { border-radius: 20px; }
+  .team-featured__photo { min-height: 300px; }
+  .team-featured__info { padding: 24px; gap: 16px; }
+  .team-featured__name { font-size: 22px; }
+  .team-featured__item { font-size: 14px; }
+  .team-lawyers { padding: 60px 0 72px; }
+  .team-lawyers__grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .lawyer-card__photo { height: 200px; }
+  .team-values { padding: 60px 0 72px; }
+  .team-values__grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+}
+
+/* ============================================================
+   RESPONSIVE — 480px
+============================================================ */
+@media (max-width: 480px) {
+  .team-lawyers__grid { grid-template-columns: 1fr 1fr; }
+  .team-values__grid { grid-template-columns: 1fr 1fr; }
+}
